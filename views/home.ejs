@@ -1,0 +1,19 @@
+<div id="form">
+  <input type="text" id="message" placeholder="Type your message here" autofocus required />
+  <div id="send">Send message</div>
+</div>
+<div id="messages">
+  <%
+  messages.forEach(function(message) {
+  %>
+    <div class="message">
+      Message : <%= message %>
+    </div>
+  <% }); %>
+</div>
+<%
+scripts.push(
+  'http://192.168.0.250:8080/assets/js/home.js',
+  '/socket.io/socket.io.js'
+)
+%>

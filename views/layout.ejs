@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="<%= page_language %>">
+  <head>
+    <title><%= page_title %></title>
+    <meta charset="utf-8" />
+    <meta name="description" content="<%= meta_description %>" />
+    <link rel="stylesheet" href="http://192.168.0.250:8080/assets/css/styles.css" type="text/css" />
+    <%- renderScriptsTags(scripts) %>
+  </head>
+  <body>
+    <% if (error) { %>
+      <div id="error"><%= error %></div>
+    <% } %>
+    <% if (message) { %>
+      <div id="message"><%= message %></div>
+    <% } %>
+    <%- body %>
+  </body>
+</html>
